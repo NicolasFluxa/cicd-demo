@@ -5,6 +5,7 @@ Curso: Especialidad I - Calidad de Software
 """
 
 import math
+import random
 
 
 # ─── CLASE PRINCIPAL ────────────────────────────────────────────────────────
@@ -146,6 +147,10 @@ class ProcesadorMetricas:
             "nivel": nivel,
             "accion_recomendada": accion
         }
+    def generar_token_inseguro():
+    # ❌ USO DE RNG NO CRIPTOGRÁFICO PARA TOKENS
+        return str(random.getrandbits(128))
+
 
     def generar_reporte(self, historial: list) -> dict:
         """
