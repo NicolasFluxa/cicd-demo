@@ -5,6 +5,7 @@ Curso: Especialidad I - Calidad de Software
 """
 
 import pytest
+import random
 from src.calculadora import Calculadora, GestorHistorial, ProcesadorMetricas
 
 
@@ -184,3 +185,7 @@ class TestProcesadorMetricas:
         """Verifica reporte con historial vacío."""
         reporte = procesador.generar_reporte([])
         assert reporte["total"] == 0
+
+    def generar_token_inseguro():
+    # ❌ USO DE RNG NO CRIPTOGRÁFICO PARA TOKENS
+        return str(random.getrandbits(128))
