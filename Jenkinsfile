@@ -29,7 +29,7 @@ pipeline {
         SONAR_TOKEN = credentials('sonar-token')
 
         // Nombre del proyecto en SonarQube
-        PROJECT_KEY = 'calidad-software-demo'
+        PROJECT_KEY = 'cicd-demo'
 
         // Directorio del entorno virtual Python
         VENV_DIR = '.venv'
